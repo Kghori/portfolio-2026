@@ -86,7 +86,7 @@ export default function Experience({ darkMode }: ExperienceProps) {
   };
 
   return (
-    <section id="experience" className="py-20 lg:py-32 relative overflow-hidden">
+    <section id="experience" className="py-20 lg:py-32 relative">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -113,9 +113,9 @@ export default function Experience({ darkMode }: ExperienceProps) {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          {/* <div className={`absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 ${
-            darkMode ? 'bg-slate-700' : 'bg-slate-300'
-          }`} /> */}
+          <div className={`hidden md:block absolute md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 ${
+  darkMode ? 'bg-slate-700' : 'bg-slate-300'
+          }`} />
 
           {/* Experience Items */}
           <div className="space-y-12">
@@ -134,7 +134,7 @@ export default function Experience({ darkMode }: ExperienceProps) {
                   }`}
                 >
                   {/* Timeline Dot */}
-                  {/* <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10">
                     <div className={`w-4 h-4 rounded-full ${colorClasses.dot} ring-4 ${
                       darkMode ? 'ring-slate-900' : 'ring-slate-50'
                     }`}>
@@ -142,10 +142,10 @@ export default function Experience({ darkMode }: ExperienceProps) {
                         <span className="absolute inset-0 rounded-full animate-ping bg-indigo-500 opacity-50" />
                       )}
                     </div>
-                  </div> */}
+                  </div>
 
                   {/* Content */}
-                  <div className={`w-full md:w-1/2  md:pl-0 ${
+                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
                     isLeft ? 'md:pr-12' : 'md:pl-12'
                   }`}>
                     <div className={`p-6 lg:p-8 rounded-2xl border-l-4 ${colorClasses.border} ${
