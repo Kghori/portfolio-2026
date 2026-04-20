@@ -106,17 +106,26 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                    darkMode
-                      ? 'text-slate-300 hover:bg-slate-800 hover:text-indigo-400'
-                      : 'text-slate-600 hover:bg-slate-100 hover:text-indigo-600'
-                  }`}
-                >
-                  {link.name}
-                </a>
+                 key={link.name}
+  href={link.href}
+  onClick={(e) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const target = document.querySelector(link.href);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }, 300); // wait for menu close animation to finish
+    }
+  }}
+  className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+    darkMode
+      ? 'text-slate-300 hover:bg-slate-800 hover:text-indigo-400'
+      : 'text-slate-600 hover:bg-slate-100 hover:text-indigo-600'
+  }`}
+>
+  {link.name}
+</a>
               ))}
             </div>
           </motion.div>
