@@ -23,7 +23,7 @@ const projects = [
     'Admin Panel for Test Management'
   ],
   github: 'https://github.com/Kghori',
-  // demo: '#',
+  demo: '#',
 },
   {
     title: 'E-Commerce Web App',
@@ -34,7 +34,7 @@ const projects = [
     color: 'indigo',
     features: ['Product Management', 'Cart System', 'Order Tracking', 'Admin Dashboard'],
     github: 'https://github.com/Kghori',
-    // demo: '#',
+    demo: '#',
   },
   {
   title: 'Job Listing & Recruitment Platform',
