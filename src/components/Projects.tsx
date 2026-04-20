@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, ShoppingCart, BookOpen, Diamond, Layers, Code, Rocket } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart, BookOpen, Diamond, Layers, Code } from 'lucide-react';
 import { Brain,Briefcase } from 'lucide-react';
 interface ProjectsProps {
   darkMode: boolean;
