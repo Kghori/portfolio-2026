@@ -134,7 +134,7 @@ export default function Experience({ darkMode }: ExperienceProps) {
                   }`}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10">
+                  <div className="hidden md:flex absolute md:left-1/2 -translate-x-1/2 z-10">
                     <div className={`w-4 h-4 rounded-full ${colorClasses.dot} ring-4 ${
                       darkMode ? 'ring-slate-900' : 'ring-slate-50'
                     }`}>
@@ -145,7 +145,7 @@ export default function Experience({ darkMode }: ExperienceProps) {
                   </div>
 
                   {/* Content */}
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
+                  <div className={`w-full md:w-1/2 md:pl-12 md:pl-0 ${
                     isLeft ? 'md:pr-12' : 'md:pl-12'
                   }`}>
                     <div className={`p-6 lg:p-8 rounded-2xl border-l-4 ${colorClasses.border} ${
