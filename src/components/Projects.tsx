@@ -1,12 +1,30 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, Github, ShoppingCart, BookOpen, Diamond, Layers, Code, Rocket } from 'lucide-react';
-
+import { Brain,Briefcase } from 'lucide-react';
 interface ProjectsProps {
   darkMode: boolean;
 }
 
 const projects = [
+{
+  title: 'AI-Based Skill Evaluation System',
+  description: 'An intelligent assessment platform that evaluates user skills through a combination of AI-analyzed text responses and dynamic MCQ tests. The system processes subjective answers using natural language techniques to assess accuracy, relevance, and depth, while objective questions provide instant scoring. It delivers real-time performance insights, skill-level classification, and detailed feedback to help users improve efficiently.',
+  image: 'ai-evaluation',
+  tags: ['Node.js', 'Express.js', 'MongoDB', 'React', 'Gemini Flsh 2.o api '],
+  icon: Brain,
+  color: 'purple',
+  features: [
+    'AI-Powered Text Answer Evaluation',
+    'Dynamic MCQ Test Generation',
+    'Real-time Scoring & Feedback',
+    'Skill Level Analysis & Reporting',
+    'User Performance Dashboard',
+    'Admin Panel for Test Management'
+  ],
+  github: 'https://github.com/Kghori',
+  demo: '#',
+},
   {
     title: 'E-Commerce Web App',
     description: 'A robust platform for product listings and online orders with an admin panel for efficient product management. Users can browse products, manage their cart, and track orders seamlessly.',
@@ -19,6 +37,26 @@ const projects = [
     demo: '#',
   },
   {
+  title: 'Job Listing & Recruitment Platform',
+  description: 'A full-featured job portal that connects job seekers with employers through a scalable role-based system. The platform includes user, admin, and super admin panels, enabling job posting, application tracking, and system-wide management. Users can browse and apply for jobs, while recruiters manage listings and candidates. The system ensures secure authentication, role-based access control, and real-time updates for an efficient hiring process.',
+  image: 'job-portal',
+  tags: ['Node.js', 'Express.js', 'MongoDB', 'React', 'JWT'],
+  icon: Briefcase,
+  color: 'rose',
+  features: [
+    'User Registration & Authentication (JWT)',
+    'Role-Based Access (User, Admin, Super Admin)',
+    'Job Posting & Management',
+    'Apply & Application Tracking System',
+    'Admin Dashboard for Recruiters',
+    'Super Admin Control Panel (User & System Management)',
+    'Search & Filter Jobs',
+    'Responsive UI & Secure APIs'
+  ],
+  github: 'https://github.com/Kghori',
+  // demo: '#',
+},
+  {
     title: 'Book Selling Website',
     description: 'A user-friendly e-commerce site with Razorpay payment integration for secure transactions. Features an admin panel to manage inventory, user accounts, and orders.',
     image: 'books',
@@ -27,7 +65,7 @@ const projects = [
     color: 'cyan',
     features: ['Razorpay Integration', 'Inventory Management', 'User Accounts', 'Order Management'],
     github: 'https://github.com/Kghori',
-    demo: '#',
+    // demo: '#',
   },
   {
     title: 'Diamond Billing System',
@@ -38,7 +76,7 @@ const projects = [
     color: 'amber',
     features: ['Salary Calculation', 'User Authentication', 'Real-time Sync', 'Employee Management'],
     github: 'https://github.com/Kghori',
-    demo: '#',
+    // demo: '#',
   },
   {
     title: 'PWA Trading Platform',
@@ -49,7 +87,7 @@ const projects = [
     color: 'green',
     features: ['Progressive Web App', 'Real-time Data', 'Trading Features', 'Cross-platform'],
     github: 'https://github.com/Kghori',
-    demo: '#',
+    // demo: '#',
   },
   {
     title: 'Internship Certificate Generator',
@@ -60,19 +98,19 @@ const projects = [
     color: 'purple',
     features: ['Certificate Generation', 'Template System', 'PDF Export', 'Batch Processing'],
     github: 'https://github.com/Kghori',
-    demo: '#',
+    // demo: '#',
   },
-  {
-    title: 'Responsive UI Components',
-    description: 'Executed coding, debugging, and testing tasks while collaborating on the design of responsive user interfaces at Encryptix.',
-    image: 'ui',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React'],
-    icon: Rocket,
-    color: 'rose',
-    features: ['Responsive Design', 'Code Reviews', 'UI/UX', 'Cross-browser'],
-    github: 'https://github.com/Kghori',
-    demo: '#',
-  },
+  // {
+  //   title: 'Responsive UI Components',
+  //   description: 'Executed coding, debugging, and testing tasks while collaborating on the design of responsive user interfaces at Encryptix.',
+  //   image: 'ui',
+  //   tags: ['HTML', 'CSS', 'JavaScript', 'React'],
+  //   icon: Rocket,
+  //   color: 'rose',
+  //   features: ['Responsive Design', 'Code Reviews', 'UI/UX', 'Cross-browser'],
+  //   github: 'https://github.com/Kghori',
+  //   // demo: '#',
+  // },
 ];
 
 export default function Projects({ darkMode }: ProjectsProps) {
